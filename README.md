@@ -1,6 +1,6 @@
 # pap24
 
-Extension shows Breaking News section from (www.pap.pl)[http://www.pap.pl]
+Extension shows Breaking News section from [www.pap.pl](http://www.pap.pl)
 
 # About PAP
 
@@ -8,4 +8,4 @@ Polish Press Agency (Polish: Polska Agencja Prasowa, PAP) is a Poland's news age
 
 # Chrome Extension
 
-Chrome extension is available in (Chrome Web Store)[https://chrome.google.com/webstore/detail/pap24/cpmpnaipjpcbbaagfjoodoinamgojnon]
+Chrome extension is available in [Chrome Web Store](https://chrome.google.com/webstore/detail/pap24/cpmpnaipjpcbbaagfjoodoinamgojnon)
