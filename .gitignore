@@ -9,3 +9,6 @@
 
 # Ignore bundle files
 /dev/
+
+# Ignore local roadman
+/ROADMAP.md
