@@ -1,4 +1,6 @@
-$(window).load(function () {
+var $ = require("jquery");
+
+$(function () {
     var request = $.ajax({
         url: 'http://www.pap.pl',
         method: 'GET',
