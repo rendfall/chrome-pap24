@@ -19,7 +19,10 @@ var ICONS_FOLDER = './src/assets/icons';
 var TEMPLATES_FOLDER = './src/templates';
 
 gulp.task('styles', function () {
-    return gulp.src(STYLES_FOLDER + '/**/*.scss')
+    return gulp.src([
+            STYLES_FOLDER + '/**/*.scss',
+            STYLES_FOLDER + '/**/*.css'
+        ])
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('styles.css'))
         .pipe(cssnano())

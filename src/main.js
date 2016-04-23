@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import 'bootstrap-sass';
 import Request from './scripts/request';
 
 $(function () {
