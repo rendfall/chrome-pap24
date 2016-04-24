@@ -1,11 +1,60 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+$_POPUP_WIDTH: 600px;
+$_POPUP_HEIGHT: 300px;
+$_PANEL_WIDTH: 100px;
+
 body {
     background-color: #fff;
     font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
     font-size: 100%;
-    width: 500px;
-    height: 300px;
+    width: $_POPUP_WIDTH;
+    height: $_POPUP_HEIGHT;
+}
+
+.tabs-right {
+    .tab-content > .tab-pane,
+    .pill-content > .pill-pane {
+        display: none;
+    }
+
+    .tab-content > .active,
+    .pill-content > .active {
+        display: block;
+    }
+
+    & > .nav-tabs {
+        float: right;
+        margin-left: 19px;
+        border-left: 1px solid #ddd;
+        border-bottom: 0;
+        margin-left: 0;
+
+        & > li {
+            float: none;
+
+            & > a {
+                min-width: 74px;
+                margin-right: 0;
+                margin-bottom: 3px;
+                margin-left: -1px;
+                -webkit-border-radius: 0 4px 4px 0;
+                -moz-border-radius: 0 4px 4px 0;
+                border-radius: 0 4px 4px 0;
+
+                &:focus {
+                    border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+                }
+            }
+        }
+
+        .active > a,
+        .active > a:hover,
+        .active > a:focus {
+            border-color: #ddd #ddd #ddd transparent;
+            *border-left-color: #ffffff;
+        }
+    }
 }
 
 #content {
