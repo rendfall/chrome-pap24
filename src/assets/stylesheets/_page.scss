@@ -1,0 +1,15 @@
+@import "section-24.scss";
+
+.page-container {
+    width: ($_BASE_WIDTH - $_PANEL_WIDTH) - $_PANEL_GUTTER;
+    height: 100%;
+    padding: $_PAGE_PADDING;
+}
+
+.panel-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: $_PANEL_WIDTH;
+    height: 100%;
+}

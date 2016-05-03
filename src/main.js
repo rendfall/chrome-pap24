@@ -1,4 +1,3 @@
-import 'bootstrap-sass';
 import Request from './scripts/request';
 
 $(function () {
