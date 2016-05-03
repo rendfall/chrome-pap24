@@ -34,6 +34,13 @@
         $hover_color: darken($_PANEL_BG_COLOR, 10%);
         $border_color: $hover_color;
 
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
         border: none;
         border-bottom: 1px solid $border_color;
         outline: none;
