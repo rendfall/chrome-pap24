@@ -40,7 +40,7 @@ function fetchRSS() {
             `;
         });
 
-        $content.html(content);
+        $content.html(`<ul>${content}</ul>`);
     });
 
     request.fail((jqXHR, textStatus) => {

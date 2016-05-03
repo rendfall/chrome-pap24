@@ -1,0 +1,20 @@
+#page-rss-feed {
+    ul {
+        li {
+            display: block;
+            margin-bottom: 20px;
+
+            h2 {
+                overflow: hidden;
+                margin-bottom: 15px;
+
+                a {
+                    text-decoration: none;
+                    color: $_COLOR_RED;
+                    font-family: open_sansbold, Tahoma,Arial, sans-serif;
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
