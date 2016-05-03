@@ -1,4 +1,4 @@
-import Request from './scripts/request';
+import Request from './scripts/lib/request';
 
 $(function () {
     var request = new Request('http://www.pap.pl');

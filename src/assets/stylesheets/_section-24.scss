@@ -1,6 +1,6 @@
 #content {
     .item-date {
-        font-family: 'open_sansbold',Tahoma,Arial,sans-serif;
+        font-family: 'open_sansbold', Tahoma, Arial, sans-serif;
         font-size: 38px;
         line-height: 1.4em;
         margin: 25px 0;
@@ -13,7 +13,7 @@
     .item {
         padding-left: 10px;
         padding-bottom: 15px;
-        border-left: 1px solid #ee3424;
+        border-left: 1px solid $_COLOR_RED;
         position: relative;
 
         &::before {
@@ -24,15 +24,15 @@
             border-radius: 10px 10px 10px 10px;
             -moz-border-radius: 10px 10px 10px 10px;
             -webkit-border-radius: 10px 10px 10px 10px;
-            border: 4px solid #fff;
-            background-color: #ee3425;
+            border: 4px solid $_BASE_BG_COLOR;
+            background-color: $_COLOR_RED;
             position: absolute;
             left: -9px;
             top: 0;
         }
 
         &:last-child {
-            border-left: 1px solid #ee3425;
+            border-left: 1px solid $_COLOR_RED;
             padding-bottom: 0;
         }
 
