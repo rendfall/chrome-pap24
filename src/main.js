@@ -1,5 +1,7 @@
 import Request from './scripts/lib/request';
 
+import panel from './scripts/panel';
+
 $(function () {
     var request = new Request('http://www.pap.pl');
     var $content = $('#content');

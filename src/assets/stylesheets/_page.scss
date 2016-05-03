@@ -15,7 +15,7 @@
         z-index: 1;
         display: none;
 
-        &:first-child {
+        &.active {
             display: block;
         }
     }
@@ -34,7 +34,8 @@
         $hover_color: darken($_PANEL_BG_COLOR, 10%);
         $border_color: $hover_color;
 
-        border: 1px solid $border_color;
+        border: none;
+        border-bottom: 1px solid $border_color;
         outline: none;
         width: 100%;
         height: $height;
@@ -44,6 +45,7 @@
         color: #fff;
         text-align: center;
 
+        &.active,
         &:hover {
             color: #fff;
             background-color: $hover_color;

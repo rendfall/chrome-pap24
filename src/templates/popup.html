@@ -4,24 +4,30 @@
         <title>PAP24</title>
     </head>
 
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css" />
 
     <body>
 
         <div class="master-wrapper">
 
             <div class="page-container">
-                <div id="page-section-24" class="page-section-24 page">
+                <div id="page-section-24" class="page-section-24 active page">
                     <div id="content">Loading...</div>
                 </div>
                 <div id="page-rss-feed" class="page-rss-feed page">
-                    abc
+                    Loading...
                 </div>
             </div>
 
             <div class="panel-container">
-                <button target="page-section-24" type="button">Serwis 24</button>
-                <button target="page-rss-feed" type="button">Kanał RSS</button>
+                <button target="#page-section-24" class="active" type="button">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    Serwis 24
+                </button>
+                <button target="#page-rss-feed" type="button">
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    Kanał RSS
+                </button>
             </div>
         </div>
 
