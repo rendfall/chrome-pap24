@@ -1,0 +1,27 @@
+#page-rss-feed {
+    ul {
+        li {
+            display: block;
+            margin-bottom: 20px;
+
+            h2 {
+                overflow: hidden;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+                border-bottom: #d4d4d4 1px solid;
+
+                a {
+                    text-decoration: none;
+                    color: $_COLOR_RED;
+                    font-family: open_sansbold, Tahoma, Arial, sans-serif;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                    &:hover {
+                        color: darken($_COLOR_RED, 20%);
+                    }
+                }
+            }
+        }
+    }
+}

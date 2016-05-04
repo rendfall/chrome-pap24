@@ -3,7 +3,7 @@ import $ from 'jquery';
 class Request {
     constructor(url) {
         return $.ajax({
-           url: 'http://www.pap.pl',
+           url: url,
            method: 'GET',
            dataType: 'html'
        });

@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
     entry: __dirname + '/src/main.js',
 
@@ -20,5 +22,13 @@ module.exports = {
                 }
             }
         ]
-    }
+    },
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
+        })
+    ]
 };
