@@ -22,7 +22,8 @@ function fetchRSS() {
     let $content = $('#page-rss-feed');
 
     request.done((response) => {
-        let $items = $(response).find('item');
+        let xml = $.parseXML(response);
+        let $items = $(xml).find('item');
         let content = '';
 
         $items.each(function () {
@@ -33,7 +34,7 @@ function fetchRSS() {
             content += `
                 <li>
                     <h2>
-                        <a href="${link}">${title}</a>
+                        <a href="${link}" target="_blank">${title}</a>
                     </h2>
                     <div class="description">${description}</div>
                 </li>
