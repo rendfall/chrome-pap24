@@ -1,36 +1,34 @@
 <!doctype html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+
         <title>PAP24</title>
     </head>
 
-    <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css" />
-
     <body>
-
         <div class="master-wrapper">
 
-            <div class="page-container">
+            <div id="pages" class="page-container">
                 <div id="page-section-24" class="page-section-24 active page">
-                    <div id="content">Loading...</div>
+                    <div id="page-news-24">Loading...</div>
                 </div>
                 <div id="page-rss-feed" class="page-rss-feed page">
                     Loading...
                 </div>
             </div>
 
-            <div class="panel-container">
+            <div id="navigation" class="nav-container">
                 <button target="#page-section-24" class="active" type="button">
-                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                     Serwis 24
                 </button>
                 <button target="#page-rss-feed" type="button">
-                    <i class="fa fa-rss" aria-hidden="true"></i>
                     Kanał RSS
                 </button>
             </div>
+
         </div>
 
-        <script src="popup.js"></script>
+        <script src="./bundle.js"></script>
     </body>
 </html>

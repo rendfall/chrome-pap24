@@ -8,6 +8,7 @@
 /npm-debug.log
 
 # Ignore bundle files
+/dist/
 /dev/
 
 # Ignore local roadman

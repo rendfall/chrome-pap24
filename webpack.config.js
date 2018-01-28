@@ -1,34 +1,52 @@
-var webpack = require('webpack');
+const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: __dirname + '/src/main.js',
-
-    output: {
-        path: __dirname + '/dev/',
-        filename: 'popup.js'
+    entry: {
+        app: path.join(__dirname, 'src/main.js')
     },
-
-    // http://webpack.github.io/docs/configuration.html#devtool
-    devtool: "#cheap-module-source-map",
-
+    devtool: 'source-map',
+    output: {
+        pathinfo: false,
+        path: path.join(__dirname, 'dist'),
+        publicPath: './dist/',
+        filename: 'bundle.js'
+    },
+    plugins: [
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, 'src/manifest.json'),
+                to: path.resolve(__dirname, 'dist/manifest.json')
+            }, {
+                from: path.resolve(__dirname, 'src/templates'),
+                to: path.resolve(__dirname, 'dist/')
+            }, {
+                from: path.resolve(__dirname, 'src/assets'),
+                to: path.resolve(__dirname, 'dist/assets')
+            }
+        ])
+    ],
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015', 'stage-0']
-                }
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env']
+                    }
+                }],
+                include: path.join(__dirname, 'src')
+            },
+            {
+                test: /\.scss$/,
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     },
-
-    plugins: [
-        new webpack.ProvidePlugin({
-            jQuery: 'jquery',
-            $: 'jquery',
-            jquery: 'jquery'
-        })
-    ]
+    node: {
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+    }
 };
