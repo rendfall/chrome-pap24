@@ -1,6 +1,7 @@
-@import "variables.scss";
 @import "reset.scss";
+@import "materialize/materialize.scss";
 @import "page.scss";
+@import "breaking-news.scss";
 
 html {
     box-sizing: border-box;
@@ -16,15 +17,27 @@ html {
 }
 
 body {
-    background-color: $_BASE_BG_COLOR;
-    font-family: $_BASE_FONT_FAMILY;
+    background-color: #fafafa;
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
     font-size: 100%;
-    width: $_BASE_WIDTH;
-    height: $_BASE_HEIGHT;
+    width: 800px;
+    height: 600px;
 }
 
-.master-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.collection {
+    margin: 0;
+
+    a.collection-item {
+        color: #ee3124;
+
+        &:not(.active):hover {
+            color: #fff;
+            background-color: #ee3124;
+        }
+
+        &.active {
+            color: #fff;
+            background-color: #ee3124;
+        }
+    }
 }

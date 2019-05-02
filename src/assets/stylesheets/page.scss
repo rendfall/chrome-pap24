@@ -1,0 +1,63 @@
+.page-content {
+    h1 {
+        color: #ee3124;
+        font-size: 22px;
+        font-weight: bold;
+        margin: 15px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ee3124;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        margin: 2px 0;
+
+        .col {
+            padding: 5px;
+        }
+    }
+
+    .item {
+        padding: 10px 0;
+
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0 0 5px 0 #e6e6e6;
+        }
+
+        .time {
+            font-size: 25px;
+        }
+
+        .date {
+            display: flex;
+            flex-direction: column;
+
+            .day,
+            .month {
+                text-align: center;
+            }
+
+            .day {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .month {
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }
+
+        .title {
+            overflow: hidden;
+            line-height: 1.2em;
+        }
+    }
+}
