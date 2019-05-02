@@ -2,7 +2,7 @@
     "name": "pap24",
     "description": "Chrome extension shows Breaking News section from www.pap.pl",
     "author": "rendfall",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "scripts": {
         "clear": "rm -rf node_modules/",
         "prebuild": "rm -rf dist/",
