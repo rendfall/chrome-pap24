@@ -5,7 +5,7 @@ module.exports = {
     entry: {
         app: path.join(__dirname, 'src/main.js')
     },
-    devtool: 'source-map',
+    mode: 'production',
     output: {
         pathinfo: false,
         path: path.join(__dirname, 'dist'),
@@ -30,18 +30,19 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                use: [{
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['env']
-                    }
-                }],
-                include: path.join(__dirname, 'src')
+                exclude: /node_modules/,
+                use: 'babel-loader',
+                include: path.join(__dirname, 'src'),
             },
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
-            }
+                exclude: /node_modules/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            },
         ]
     },
     node: {
